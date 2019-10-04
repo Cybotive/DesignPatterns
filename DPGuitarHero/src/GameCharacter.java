@@ -5,11 +5,15 @@ public class GameCharacter {
 	private GuitarBehavior guitarBehavior;
 	private String name;
 	
-	public void setGuitar(int sel) {
+	public GameCharacter() {
 		
 	}
 	
-	public void setSolo(int sel) {
+	public void setGuitar(GuitarBehavior gB) {
+		
+	}
+	
+	public void setSolo(SoloBehavior sB) {
 		
 	}
 	
