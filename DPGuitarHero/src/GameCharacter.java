@@ -1,5 +1,3 @@
-import java.util.Random;
-
 //Joshua Lini 10-4-19
 public class GameCharacter {
 	
