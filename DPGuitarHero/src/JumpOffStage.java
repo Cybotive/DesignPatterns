@@ -3,8 +3,7 @@ public class JumpOffStage implements SoloBehavior {
 
 	@Override
 	public void solo() {
-		// TODO Auto-generated method stub
-
+		System.out.println("jumps off the stage with their guitar in hand!");
 	}
 
 }

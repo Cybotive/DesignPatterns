@@ -3,8 +3,7 @@ public class SmashGuitar implements SoloBehavior {
 
 	@Override
 	public void solo() {
-		// TODO Auto-generated method stub
-
+		System.out.println("smashes their guitar into the ground!");
 	}
 
 }

@@ -3,8 +3,7 @@ public class GibsonSG implements GuitarBehavior {
 
 	@Override
 	public void play() {
-		// TODO Auto-generated method stub
-
+		System.out.println("plays the GibsonSG guitar.");
 	}
 
 }

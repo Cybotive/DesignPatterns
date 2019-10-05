@@ -3,8 +3,7 @@ public class GibFlyingV implements GuitarBehavior {
 
 	@Override
 	public void play() {
-		// TODO Auto-generated method stub
-
+		System.out.println("plays the Gibson Flying V guitar.");
 	}
 
 }
