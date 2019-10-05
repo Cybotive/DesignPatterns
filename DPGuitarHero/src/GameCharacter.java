@@ -1,7 +1,3 @@
-import javax.management.InvalidAttributeValueException;
-
-import org.omg.CORBA.DynAnyPackage.InvalidValue;
-
 //Joshua Lini 10-4-19
 public class GameCharacter {
 	
