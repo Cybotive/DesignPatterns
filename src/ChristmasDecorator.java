@@ -1,9 +1,9 @@
 //Joshua Lini 10-23-19
-public abstract class Tree implements ChristmasItem {
+public abstract class ChristmasDecorator implements ChristmasItem {
 	
 	public double cost;
 	public String name;
-
+	
 	@Override
 	public double getCost() {
 		return cost;
@@ -13,5 +13,5 @@ public abstract class Tree implements ChristmasItem {
 	public String getName() {
 		return name;
 	}
-	
+
 }
