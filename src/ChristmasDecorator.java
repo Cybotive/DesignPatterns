@@ -1,5 +1,3 @@
-import java.util.InputMismatchException;
-
 //Joshua Lini 10-23-19
 public abstract class ChristmasDecorator implements ChristmasItem {
 	
