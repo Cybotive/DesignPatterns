@@ -7,11 +7,10 @@ public abstract class ChristmasDecorator implements ChristmasItem {
 	private String name;
 	private ChristmasItem CItem;
 	
-	public ChristmasItem ChristmasDecorator(ChristmasItem CItem) {
+	public ChristmasDecorator(ChristmasItem CItem) {
 		if(CItem == null) { throw new IllegalArgumentException("CItem may not be null."); }
 		
 		this.CItem = CItem;
-		return CItem;
 	}
 	
 	public abstract ChristmasItem getDecoratedItem();
