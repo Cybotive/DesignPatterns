@@ -1,17 +1,19 @@
+import java.util.InputMismatchException;
+
 //Joshua Lini 10-23-19
 public abstract class ChristmasDecorator implements ChristmasItem {
 	
-	public double cost;
-	public String name;
+	private double cost;
+	private String name;
+	private ChristmasItem CItem;
 	
-	@Override
-	public double getCost() {
-		return cost;
+	public ChristmasItem ChristmasDecorator(ChristmasItem CItem) {
+		if(CItem == null) { throw new IllegalArgumentException("CItem may not be null."); }
+		
+		this.CItem = CItem;
+		return CItem;
 	}
-
-	@Override
-	public String getName() {
-		return name;
-	}
+	
+	public abstract ChristmasItem getDecoratedItem();
 
 }
