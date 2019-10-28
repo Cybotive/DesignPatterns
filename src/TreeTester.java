@@ -5,35 +5,7 @@ import holiday_decorations.*;
 public class TreeTester {
 
 	public static void main(String[] args) {
-		ChristmasItem fraserTree = new FraserFir();
-		printTree(fraserTree);
-		
-		ChristmasItem decoratedFraser = new Ruffles(fraserTree);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = new BallsRed(decoratedFraser);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = new BallsSilver(decoratedFraser);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = new BallsBlue(decoratedFraser);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = Star.wrap(decoratedFraser);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = new Ribbons(decoratedFraser);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = new Lights(decoratedFraser);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = new Leds(decoratedFraser);
-		printTree(decoratedFraser);
-		
-		decoratedFraser = Star.wrap(decoratedFraser);//should return its input
-		printTree(decoratedFraser);
+		treeTestA();
 	}
 	
 	private static void printTree(ChristmasItem decoratedTree) {
@@ -64,6 +36,44 @@ public class TreeTester {
 		}
 		
 		System.out.println(" costs $" + (totalCost + decoratedTree.getCost()));
+	}
+	
+	private static void treeTestA() {
+		ChristmasItem fraserTree = new FraserFir();
+		printTree(fraserTree);
+		
+		fraserTree = Star.wrap(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = new Ruffles(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = Star.wrap(fraserTree); //should return its input
+		printTree(fraserTree);
+		
+		fraserTree = new BallsRed(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = new BallsSilver(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = new BallsBlue(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = Star.wrap(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = new Ribbons(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = new Lights(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = new Leds(fraserTree);
+		printTree(fraserTree);
+		
+		fraserTree = Star.wrap(fraserTree);
+		printTree(fraserTree);
 	}
 
 }
