@@ -20,6 +20,9 @@ public class TreeTester {
 		decoratedFraser = new BallsBlue(decoratedFraser);
 		printTree(decoratedFraser);
 		
+		decoratedFraser = Star.wrap(decoratedFraser);
+		printTree(decoratedFraser);
+		
 		decoratedFraser = new Ribbons(decoratedFraser);
 		printTree(decoratedFraser);
 		
@@ -29,7 +32,7 @@ public class TreeTester {
 		decoratedFraser = new Leds(decoratedFraser);
 		printTree(decoratedFraser);
 		
-		decoratedFraser = new Star(decoratedFraser);
+		decoratedFraser = Star.wrap(decoratedFraser);//should return its input
 		printTree(decoratedFraser);
 	}
 	
