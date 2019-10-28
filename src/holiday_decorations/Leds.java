@@ -1,5 +1,5 @@
 package holiday_decorations;
-//Joshua Lini 10-27-19
+//Joshua Lini 10-28-19
 public class Leds extends ChristmasDecorator {
 	
 	private double cost;

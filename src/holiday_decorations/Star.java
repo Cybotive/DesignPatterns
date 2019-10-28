@@ -1,15 +1,15 @@
 package holiday_decorations;
 //Joshua Lini 10-28-19
-public class BallsRed extends ChristmasDecorator {
+public class Star extends ChristmasDecorator { //TODO Add only-one functionality
 
 	private double cost;
 	private String name;
 
-	public BallsRed(ChristmasItem CItem){
+	public Star(ChristmasItem CItem){
 		super(CItem);
 		
 		this.cost = 1.0;
-		this.name = "Balls Red";
+		this.name = "Ruffles";
 	}
 	
 	@Override

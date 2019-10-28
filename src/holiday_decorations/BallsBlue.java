@@ -1,5 +1,5 @@
 package holiday_decorations;
-
+//Joshua Lini 10-28-19
 public class BallsBlue extends ChristmasDecorator {
 
 	private double cost;

@@ -6,17 +6,32 @@ public class TreeTester {
 
 	public static void main(String[] args) {
 		ChristmasItem fraserTree = new FraserFir();
-		ChristmasDecorator decoratedFraser = new Ruffles(fraserTree);
-		ChristmasDecorator decoratedFraserTwo = new BallsRed(decoratedFraser);
-		
 		printTree(fraserTree);
+		
+		ChristmasItem decoratedFraser = new Ruffles(fraserTree);
 		printTree(decoratedFraser);
-		printTree(decoratedFraserTwo);
+		
+		decoratedFraser = new BallsRed(decoratedFraser);
+		printTree(decoratedFraser);
+		
+		decoratedFraser = new BallsSilver(decoratedFraser);
+		printTree(decoratedFraser);
+		
+		decoratedFraser = new BallsBlue(decoratedFraser);
+		printTree(decoratedFraser);
+		
+		decoratedFraser = new Ribbons(decoratedFraser);
+		printTree(decoratedFraser);
+		
+		decoratedFraser = new Lights(decoratedFraser);
+		printTree(decoratedFraser);
+		
+		decoratedFraser = new Leds(decoratedFraser);
+		printTree(decoratedFraser);
+		
+		decoratedFraser = new Star(decoratedFraser);
+		printTree(decoratedFraser);
 	}
-	
-	/*private static void printTree(ChristmasItem treeObj) {
-		System.out.println(treeObj.getName() + " without decorations costs $" + treeObj.getCost());
-	}*/
 	
 	private static void printTree(ChristmasItem decoratedTree) {
 		Stack<String> printStack = new Stack<String>();
