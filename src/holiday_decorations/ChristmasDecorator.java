@@ -1,3 +1,4 @@
+package holiday_decorations;
 //Joshua Lini 10-23-19
 public abstract class ChristmasDecorator implements ChristmasItem {
 	
