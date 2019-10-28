@@ -7,7 +7,7 @@ public class TreeTester {
 	public static void main(String[] args) {
 		ChristmasItem fraserTree = new FraserFir();
 		ChristmasDecorator decoratedFraser = new Ruffles(fraserTree);
-		ChristmasDecorator decoratedFraserTwo = new Ruffles(decoratedFraser);
+		ChristmasDecorator decoratedFraserTwo = new BallsRed(decoratedFraser);
 		
 		printTree(fraserTree);
 		printTree(decoratedFraser);
@@ -24,7 +24,7 @@ public class TreeTester {
 		
 		try {
 			while(true) {
-				printStack.add(((ChristmasDecorator)decoratedTree).getName());
+				printStack.push(((ChristmasDecorator)decoratedTree).getName());
 				totalCost += ((ChristmasDecorator)decoratedTree).getCost();
 				
 				decoratedTree = ((ChristmasDecorator)decoratedTree).getDecoratedItem();
@@ -41,8 +41,8 @@ public class TreeTester {
 			System.out.print(decoratedTree.getName() + " tree decorated with");
 		}
 		
-		for(String s : printStack) {
-			System.out.print(", " + s);
+		for(; 0 < printStack.size();) {
+			System.out.print(", " + printStack.pop());
 		}
 		
 		System.out.println(" costs $" + (totalCost + decoratedTree.getCost()));
