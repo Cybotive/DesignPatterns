@@ -6,6 +6,7 @@ public class TreeTester {
 
 	public static void main(String[] args) {
 		treeTestA();
+		treeTestB();
 	}
 	
 	private static void printTree(ChristmasItem decoratedTree) {
@@ -39,6 +40,7 @@ public class TreeTester {
 	}
 	
 	private static void treeTestA() {
+		System.out.println("Start of treeTestA");
 		ChristmasItem fraserTree = new FraserFir();
 		printTree(fraserTree);
 		
@@ -74,6 +76,20 @@ public class TreeTester {
 		
 		fraserTree = Star.wrap(fraserTree);
 		printTree(fraserTree);
+	}
+	
+	private static void treeTestB() {
+		System.out.println("Start of treeTestB");
+		ChristmasItem[] treeArray = new ChristmasItem[4];
+		
+		treeArray[0] = new Leds(new FraserFir());
+		treeArray[1] = new Leds(new DouglasFir());
+		treeArray[2] = new Leds(new BalsamFir());
+		treeArray[3] = new Leds(new CoBlueSpruce());
+		
+		for(ChristmasItem CItem : treeArray) {
+			printTree(CItem);
+		}
 	}
 
 }
