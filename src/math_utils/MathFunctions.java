@@ -14,6 +14,18 @@ public class MathFunctions {
 	}
 	
 	public int power(int base, int exp) {
-		return 0;//TODO
+		if(base < 0 || exp < 0) { throw new IllegalArgumentException("base and/or exponent may not be negative"); }
+		
+		if(exp == 0) {
+			return 1;
+		}
+		
+		int result = base;
+		
+		for(int i = 1; i < exp; i++) {
+			result *= base;
+		}
+		
+		return result;
 	}
 }
