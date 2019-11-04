@@ -11,26 +11,45 @@ public class Fraction {
 		if(den == 0) { throw new IllegalArgumentException("The denominator with the value of 0 is not permitted"); }
 		
 		if(den < 0) {
-			denominator = den * -1;
-			numerator = num * -1;
+			den *= -1;
+			num *= -1;
 		}
-		else {
-			denominator = den;
-			numerator = num;
+		
+		int gcd = getGcd(num, den);
+		
+		numerator = num / gcd;
+		denominator = den / gcd;
+	}
+	
+	private int getGcd(int num, int den) {
+		int gcd = num;
+		if (den > num) {
+			gcd = den;
 		}
+		
+		if(num < 0) {
+			num *= -1;
+		}
+		
+		while(num % (gcd-1) == 0 && den % (gcd-1) == 0)//TODO WIP true/false is backwards
+		{
+			gcd--;
+		}
+		
+		return gcd;
 	}
 
-	public Integer getNum() {
+	public int getNum() {
 		return numerator;
 	}
 
-	public Integer getDen() {
+	public int getDen() {
 		return denominator;
 	}
 
-	public Integer compareTo(Fraction fraction) {
+	public int compareTo(Fraction fraction) {
 		// TODO Auto-generated method stub
-		return null;
+		return -1;
 	}
 
 	public Fraction add(Fraction fraction) {
