@@ -3,19 +3,29 @@
 package fraction;
 
 public class Fraction {
+	
+	private int numerator;
+	private int denominator;
 
-	public Fraction(int i, int j) {
-		// TODO Auto-generated constructor stub
+	public Fraction(int num, int den) {		
+		if(den == 0) { throw new IllegalArgumentException("The denominator with the value of 0 is not permitted"); }
+		
+		if(den < 0) {
+			denominator = den * -1;
+			numerator = num * -1;
+		}
+		else {
+			denominator = den;
+			numerator = num;
+		}
 	}
 
 	public Integer getNum() {
-		// TODO Auto-generated method stub
-		return null;
+		return numerator;
 	}
 
 	public Integer getDen() {
-		// TODO Auto-generated method stub
-		return null;
+		return denominator;
 	}
 
 	public Integer compareTo(Fraction fraction) {
