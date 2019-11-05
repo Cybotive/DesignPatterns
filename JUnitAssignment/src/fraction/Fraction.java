@@ -30,23 +30,12 @@ public class Fraction {
 			den *= -1;
 		}
 		
-		int gcd = num;
-		if (den < num) {
-			gcd = den;
-		}
+		int gcd = 1;
 		
-		int temp = gcd;
-		
-		while(gcd > 1 && (double)num % (gcd-1) == 0 && (double)den % (gcd-1) == 0)//TODO WIP true/false is backwards
-		{
-			gcd--;
-		}
-		
-		if(gcd == temp && (double)num % gcd == 0 && (double)den % gcd == 0) {
-			return gcd;
-		}
-		else if(gcd == temp) {
-			return 1;
+		for(int i = 1; i <= den; i++) {
+			if((double)num % i == 0 && (double)den % i == 0) {
+				gcd = i;
+			}
 		}
 		
 		return gcd;
