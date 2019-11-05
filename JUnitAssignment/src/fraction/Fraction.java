@@ -21,19 +21,32 @@ public class Fraction {
 		denominator = den / gcd;
 	}
 	
-	private int getGcd(int num, int den) {
-		int gcd = num;
-		if (den > num) {
-			gcd = den;
-		}
-		
+	private int getGcd(int num, int den) {		
 		if(num < 0) {
 			num *= -1;
 		}
 		
-		while(num % (gcd-1) == 0 && den % (gcd-1) == 0)//TODO WIP true/false is backwards
+		if(den < 0) {
+			den *= -1;
+		}
+		
+		int gcd = num;
+		if (den < num) {
+			gcd = den;
+		}
+		
+		int temp = gcd;
+		
+		while(gcd > 1 && (double)num % (gcd-1) == 0 && (double)den % (gcd-1) == 0)//TODO WIP true/false is backwards
 		{
 			gcd--;
+		}
+		
+		if(gcd == temp && (double)num % gcd == 0 && (double)den % gcd == 0) {
+			return gcd;
+		}
+		else if(gcd == temp) {
+			return 1;
 		}
 		
 		return gcd;
