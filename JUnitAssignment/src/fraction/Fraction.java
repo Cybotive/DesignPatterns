@@ -71,8 +71,9 @@ public class Fraction {
 	}
 
 	public Fraction multiply(Fraction fraction) {
-		// TODO Auto-generated method stub
-		return null;
+		if(fraction == null) { throw new IllegalArgumentException("Cannot perform math operations on a null fraction object!"); }
+		
+		return new Fraction(this.numerator * fraction.getNum(), this.denominator * fraction.getDen());
 	}
 
 	public double realValue() {
