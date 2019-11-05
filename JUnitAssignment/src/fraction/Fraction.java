@@ -57,8 +57,17 @@ public class Fraction {
 	}
 
 	public Fraction add(Fraction fraction) {
-		// TODO Auto-generated method stub
-		return null;
+		if(fraction == null) { throw new IllegalArgumentException("Cannot perform math operations on a null fraction object!"); }
+		
+		if(this.denominator == fraction.getDen())
+			return new Fraction(this.numerator + fraction.getNum(), this.denominator);
+		
+		int thisNum = this.numerator * fraction.getDen();
+		int thisDen = this.denominator * fraction.getDen();
+		
+		int otherNum = fraction.getNum() * this.denominator;
+		
+		return new Fraction(thisNum + otherNum, thisDen);
 	}
 
 	public Fraction multiply(Fraction fraction) {
