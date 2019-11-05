@@ -50,38 +50,10 @@ public class Fraction {
 	}
 
 	public int compareTo(Fraction fraction) {
-		boolean otherGreaterDen = false;
+		int numThis = this.numerator * fraction.getDen();
+		int numOther = fraction.getNum() * this.denominator;
 		
-		if(fraction.getDen() > this.getDen()) {
-			otherGreaterDen = true;
-		}
-		
-		double numTemp = this.getNum();
-		double denTemp = this.getDen();
-		
-		if(otherGreaterDen) {
-			numTemp = (numTemp / denTemp) * fraction.getDen();
-			
-			//return (int)(Math.round(numTemp) - fraction.getNum());
-		}
-		else {
-			numTemp = fraction.getNum();
-			denTemp = fraction.getDen();
-			
-			numTemp = (numTemp / denTemp) * this.getDen();
-			
-			int temp = 0;
-			
-			if(numTemp > (int)numTemp) {
-				numTemp = (int)(numTemp + 1);
-			}
-			else if (numTemp < (int)numTemp)
-			{
-				numTemp = (int)(numTemp - 1);
-			}
-			return (int)numTemp - fraction.getNum();
-			//return (int)(Math.round(numTemp) - fraction.getNum());
-		}
+		return numThis - numOther;
 	}
 
 	public Fraction add(Fraction fraction) {
