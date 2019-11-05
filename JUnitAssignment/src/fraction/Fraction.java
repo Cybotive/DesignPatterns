@@ -50,8 +50,28 @@ public class Fraction {
 	}
 
 	public int compareTo(Fraction fraction) {
-		// TODO Auto-generated method stub
-		return -1;
+		boolean otherGreaterDen = false;
+		
+		if(fraction.getDen() > this.getDen()) {
+			otherGreaterDen = true;
+		}
+		
+		double numTemp = this.getNum();
+		double denTemp = this.getDen();
+		
+		if(otherGreaterDen) {
+			numTemp = (numTemp / denTemp) * fraction.getDen();
+			
+			return (int)(Math.round(numTemp) - fraction.getNum());
+		}
+		else {
+			numTemp = fraction.getNum();
+			denTemp = fraction.getDen();
+			
+			numTemp = (numTemp / denTemp) * this.getDen();
+			
+			return (int)(Math.round(numTemp) - fraction.getNum());
+		}
 	}
 
 	public Fraction add(Fraction fraction) {
@@ -68,7 +88,29 @@ public class Fraction {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	//TODO Equals and HashCode
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + denominator;
+		result = prime * result + numerator;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Fraction other = (Fraction) obj;
+		if (denominator != other.denominator)
+			return false;
+		if (numerator != other.numerator)
+			return false;
+		return true;
+	}
 }
