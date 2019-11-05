@@ -1,5 +1,8 @@
-//Joshua Lini 11-4-19
-//TODO description
+/*Joshua Lini 11-4-19
+ * Description: This class is a container for fractions.
+ * This class was built via test-driven-development.
+ * This class includes methods for adding, multiplying, and other functionality.*/
+
 package fraction;
 
 public class Fraction {

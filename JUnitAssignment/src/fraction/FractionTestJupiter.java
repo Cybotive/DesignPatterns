@@ -1,5 +1,7 @@
-//Joshua Lini 11-4-19
-//TODO description
+/*Joshua Lini 11-4-19
+ * Description: This JUnit Jupiter Test Case was provided to me.
+ * This unit test was used for test-driven-development of Fraction*/
+
 package fraction;
 
 import static org.junit.jupiter.api.Assertions.*;
