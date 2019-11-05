@@ -62,7 +62,7 @@ public class Fraction {
 		if(otherGreaterDen) {
 			numTemp = (numTemp / denTemp) * fraction.getDen();
 			
-			return (int)(Math.round(numTemp) - fraction.getNum());
+			//return (int)(Math.round(numTemp) - fraction.getNum());
 		}
 		else {
 			numTemp = fraction.getNum();
@@ -70,7 +70,17 @@ public class Fraction {
 			
 			numTemp = (numTemp / denTemp) * this.getDen();
 			
-			return (int)(Math.round(numTemp) - fraction.getNum());
+			int temp = 0;
+			
+			if(numTemp > (int)numTemp) {
+				numTemp = (int)(numTemp + 1);
+			}
+			else if (numTemp < (int)numTemp)
+			{
+				numTemp = (int)(numTemp - 1);
+			}
+			return (int)numTemp - fraction.getNum();
+			//return (int)(Math.round(numTemp) - fraction.getNum());
 		}
 	}
 
