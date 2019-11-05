@@ -59,15 +59,15 @@ public class Fraction {
 	public Fraction add(Fraction fraction) {
 		if(fraction == null) { throw new IllegalArgumentException("Cannot perform math operations on a null fraction object!"); }
 		
-		if(this.denominator == fraction.getDen())
+		if(this.denominator == fraction.getDen()) {
 			return new Fraction(this.numerator + fraction.getNum(), this.denominator);
+		}
 		
 		int thisNum = this.numerator * fraction.getDen();
-		int thisDen = this.denominator * fraction.getDen();
-		
 		int otherNum = fraction.getNum() * this.denominator;
+		int denom = this.denominator * fraction.getDen();
 		
-		return new Fraction(thisNum + otherNum, thisDen);
+		return new Fraction(thisNum + otherNum, denom);
 	}
 
 	public Fraction multiply(Fraction fraction) {
@@ -77,8 +77,7 @@ public class Fraction {
 	}
 
 	public double realValue() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (double)this.numerator / this.denominator;
 	}
 
 	@Override
@@ -104,5 +103,10 @@ public class Fraction {
 		if (numerator != other.numerator)
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return this.numerator + "/" + this.denominator;
 	}
 }
