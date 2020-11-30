@@ -1,0 +1,1 @@
+There are no shortcomings to this solution, that I am aware of.
